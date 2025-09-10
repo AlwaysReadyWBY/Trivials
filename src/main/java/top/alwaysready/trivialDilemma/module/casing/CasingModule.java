@@ -10,6 +10,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.ItemDisplay;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
@@ -88,22 +89,22 @@ public class CasingModule extends Module implements Listener {
                 .forEach(entity -> releaseItem((ItemDisplay) entity));
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR,ignoreCancelled = true)
     public void onBlockPlace(BlockPlaceEvent ev){
         onBlockPlace(ev.getBlock(),ev.getBlockPlaced().getType());
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR,ignoreCancelled = true)
     public void onBlockBreak(BlockBreakEvent ev){
         onBlockBreak(ev.getBlock(),ev.getBlock().getType());
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR,ignoreCancelled = true)
     public void onPiston(BlockPistonExtendEvent ev){
         ev.getBlocks().forEach(block -> onBlockBreak(block,block.getType()));
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR,ignoreCancelled = true)
     public void onPiston(BlockPistonRetractEvent ev){
         ev.getBlocks().forEach(block -> onBlockBreak(block,block.getType()));
     }
