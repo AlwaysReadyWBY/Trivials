@@ -1,4 +1,4 @@
-# TrivialDilemma —— 琐事困局
+# Trivials —— 琐事
 
 
 A Spigot plugin devoted to adding various tiny vanilla-styled features to minecraft.

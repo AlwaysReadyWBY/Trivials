@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.itemframe;
+package top.alwaysready.trivials.module.itemframe;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

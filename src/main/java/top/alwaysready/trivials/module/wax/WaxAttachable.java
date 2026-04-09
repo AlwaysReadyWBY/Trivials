@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.wax;
+package top.alwaysready.trivials.module.wax;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Entity;

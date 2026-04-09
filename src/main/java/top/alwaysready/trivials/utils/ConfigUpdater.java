@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.utils;
+package top.alwaysready.trivials.utils;
 
 import org.bukkit.configuration.ConfigurationSection;
 

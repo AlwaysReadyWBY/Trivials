@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.wax;
+package top.alwaysready.trivials.module.wax;
 
 import org.bukkit.persistence.PersistentDataHolder;
 import org.bukkit.persistence.PersistentDataType;

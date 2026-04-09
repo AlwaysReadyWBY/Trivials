@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.alwaysready</groupId>
-    <artifactId>trivialdilemma</artifactId>
+    <artifactId>trivials</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>trivialdilemma</name>
+    <name>trivials</name>
 
     <properties>
         <java.version>17</java.version>

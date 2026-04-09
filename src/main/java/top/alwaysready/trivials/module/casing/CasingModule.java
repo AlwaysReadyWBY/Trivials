@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.casing;
+package top.alwaysready.trivials.module.casing;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -17,8 +17,8 @@ import org.bukkit.event.block.*;
 import org.bukkit.util.Transformation;
 import org.joml.AxisAngle4f;
 import org.joml.Vector3f;
-import top.alwaysready.trivialDilemma.TrivialDilemma;
-import top.alwaysready.trivialDilemma.module.Module;
+import top.alwaysready.trivials.Trivials;
+import top.alwaysready.trivials.module.Module;
 
 import java.util.Collection;
 
@@ -29,7 +29,7 @@ public class CasingModule extends Module implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, TrivialDilemma.getInstance());
+        Bukkit.getPluginManager().registerEvents(this, Trivials.getInstance());
     }
 
     @Override

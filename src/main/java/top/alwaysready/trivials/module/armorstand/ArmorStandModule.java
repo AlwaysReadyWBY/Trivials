@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.armorstand;
+package top.alwaysready.trivials.module.armorstand;
 
 import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
@@ -9,11 +9,11 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.inventory.ItemStack;
-import top.alwaysready.trivialDilemma.TrivialDilemma;
-import top.alwaysready.trivialDilemma.module.wax.WaxHolder;
-import top.alwaysready.trivialDilemma.module.Module;
-import top.alwaysready.trivialDilemma.utils.DilemmaMeta;
-import top.alwaysready.trivialDilemma.utils.ItemUtils;
+import top.alwaysready.trivials.Trivials;
+import top.alwaysready.trivials.module.wax.WaxHolder;
+import top.alwaysready.trivials.module.Module;
+import top.alwaysready.trivials.utils.DilemmaMeta;
+import top.alwaysready.trivials.utils.ItemUtils;
 
 public class ArmorStandModule extends Module implements Listener {
     public ArmorStandModule() {
@@ -22,7 +22,7 @@ public class ArmorStandModule extends Module implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, TrivialDilemma.getInstance());
+        Bukkit.getPluginManager().registerEvents(this, Trivials.getInstance());
     }
 
     @Override

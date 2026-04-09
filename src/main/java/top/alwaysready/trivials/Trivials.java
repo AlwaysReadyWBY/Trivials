@@ -1,21 +1,21 @@
-package top.alwaysready.trivialDilemma;
+package top.alwaysready.trivials;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-import top.alwaysready.trivialDilemma.module.ModuleManager;
-import top.alwaysready.trivialDilemma.utils.ConfigUpdater;
+import top.alwaysready.trivials.module.ModuleManager;
+import top.alwaysready.trivials.utils.ConfigUpdater;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 
-public final class TrivialDilemma extends JavaPlugin {
+public final class Trivials extends JavaPlugin {
 
-    private static TrivialDilemma instance;
+    private static Trivials instance;
 
-    public static TrivialDilemma getInstance() {
+    public static Trivials getInstance() {
         return instance;
     }
 
@@ -46,7 +46,7 @@ public final class TrivialDilemma extends JavaPlugin {
                 try {
                     cfg.save(file);
                 } catch (IOException e) {
-                    TrivialDilemma.getInstance().getLogger().log(Level.WARNING,"Failed to save config.yml",e);
+                    Trivials.getInstance().getLogger().log(Level.WARNING,"Failed to save config.yml",e);
                 }
             }
         }

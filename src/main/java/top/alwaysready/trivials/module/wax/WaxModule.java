@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.wax;
+package top.alwaysready.trivials.module.wax;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -11,10 +11,10 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
-import top.alwaysready.trivialDilemma.TrivialDilemma;
-import top.alwaysready.trivialDilemma.module.Module;
-import top.alwaysready.trivialDilemma.utils.DilemmaMeta;
-import top.alwaysready.trivialDilemma.utils.ItemUtils;
+import top.alwaysready.trivials.Trivials;
+import top.alwaysready.trivials.module.Module;
+import top.alwaysready.trivials.utils.DilemmaMeta;
+import top.alwaysready.trivials.utils.ItemUtils;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -43,7 +43,7 @@ public class WaxModule extends Module implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, TrivialDilemma.getInstance());
+        Bukkit.getPluginManager().registerEvents(this, Trivials.getInstance());
     }
 
     @Override

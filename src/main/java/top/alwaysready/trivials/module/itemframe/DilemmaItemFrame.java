@@ -1,4 +1,4 @@
-package top.alwaysready.trivialDilemma.module.itemframe;
+package top.alwaysready.trivials.module.itemframe;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -13,13 +13,13 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.Transformation;
 import org.joml.Vector3f;
-import top.alwaysready.trivialDilemma.module.wax.WaxAttachable;
-import top.alwaysready.trivialDilemma.utils.ItemUtils;
+import top.alwaysready.trivials.module.wax.WaxAttachable;
+import top.alwaysready.trivials.utils.ItemUtils;
 
 import java.util.Optional;
 import java.util.UUID;
 
-import static top.alwaysready.trivialDilemma.module.itemframe.FrameOffset.*;
+import static top.alwaysready.trivials.module.itemframe.FrameOffset.*;
 
 public class DilemmaItemFrame implements WaxAttachable {
     public static final NamespacedKey KEY_CONTENT = NamespacedKey.fromString("tdilemma:content");

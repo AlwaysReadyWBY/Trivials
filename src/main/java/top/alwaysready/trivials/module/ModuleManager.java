@@ -1,10 +1,10 @@
-package top.alwaysready.trivialDilemma.module;
+package top.alwaysready.trivials.module;
 
 import org.bukkit.configuration.ConfigurationSection;
-import top.alwaysready.trivialDilemma.module.armorstand.ArmorStandModule;
-import top.alwaysready.trivialDilemma.module.casing.CasingModule;
-import top.alwaysready.trivialDilemma.module.itemframe.ItemFrameModule;
-import top.alwaysready.trivialDilemma.module.wax.WaxModule;
+import top.alwaysready.trivials.module.armorstand.ArmorStandModule;
+import top.alwaysready.trivials.module.casing.CasingModule;
+import top.alwaysready.trivials.module.itemframe.ItemFrameModule;
+import top.alwaysready.trivials.module.wax.WaxModule;
 
 import java.util.Hashtable;
 import java.util.Map;

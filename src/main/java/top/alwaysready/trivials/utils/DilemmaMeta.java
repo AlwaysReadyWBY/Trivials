@@ -1,11 +1,11 @@
-package top.alwaysready.trivialDilemma.utils;
+package top.alwaysready.trivials.utils;
 
 import org.bukkit.entity.Interaction;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.metadata.Metadatable;
-import top.alwaysready.trivialDilemma.TrivialDilemma;
-import top.alwaysready.trivialDilemma.module.wax.WaxHolder;
-import top.alwaysready.trivialDilemma.module.itemframe.DilemmaItemFrame;
+import top.alwaysready.trivials.Trivials;
+import top.alwaysready.trivials.module.wax.WaxHolder;
+import top.alwaysready.trivials.module.itemframe.DilemmaItemFrame;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -51,7 +51,7 @@ public class DilemmaMeta<T> extends FixedMetadataValue {
     }
 
     public DilemmaMeta(T value) {
-        super(TrivialDilemma.getInstance(), value);
+        super(Trivials.getInstance(), value);
     }
 
     public static abstract class Type<T>{

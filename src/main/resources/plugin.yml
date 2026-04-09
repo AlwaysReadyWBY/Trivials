@@ -1,6 +1,6 @@
-name: TrivialDilemma
+name: Trivials
 version: '1.0.0'
-main: top.alwaysready.trivialDilemma.TrivialDilemma
+main: top.alwaysready.trivials.Trivials
 api-version: '1.21'
 authors: [ AlwaysReadyWby ]
 description: Just some random trivial features
