@@ -19,6 +19,10 @@ public abstract class ConfigUpdater {
                 moduleSec.createSection("casing").set("enabled",true);
                 moduleSec.createSection("wax").set("enabled",true);
             });
+            addVersion(sec -> {
+                ConfigurationSection moduleSec = sec.getConfigurationSection("modules");
+                moduleSec.createSection("note_block").set("enabled",true);
+            });
         }
     };
 

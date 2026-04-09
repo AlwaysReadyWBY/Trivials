@@ -22,9 +22,9 @@ import java.util.UUID;
 import static top.alwaysready.trivials.module.itemframe.FrameOffset.*;
 
 public class DilemmaItemFrame implements WaxAttachable {
-    public static final NamespacedKey KEY_CONTENT = NamespacedKey.fromString("tdilemma:content");
-    public static final NamespacedKey KEY_BACKGROUND = NamespacedKey.fromString("tdilemma:background");
-    public static final NamespacedKey KEY_ROTATION = NamespacedKey.fromString("tdilemma:rotation");
+    public static final NamespacedKey KEY_CONTENT = NamespacedKey.fromString("trivials:content");
+    public static final NamespacedKey KEY_BACKGROUND = NamespacedKey.fromString("trivials:background");
+    public static final NamespacedKey KEY_ROTATION = NamespacedKey.fromString("trivials:rotation");
 
     private ItemStack content;
     private boolean glowing;
@@ -74,7 +74,7 @@ public class DilemmaItemFrame implements WaxAttachable {
     }
 
     public void onCreate(Interaction interaction, Player placer, Block block, FrameOffset offset) {
-        interaction.addScoreboardTag("tdilemma:item_frame");
+        interaction.addScoreboardTag("trivials:item_frame");
         setFrameOffset(offset);
         interaction.teleport(getFrameOffset().getLocation(block.getLocation()));
         interaction.getWorld().spawn(interaction.getLocation().clone(), ItemDisplay.class,
@@ -162,7 +162,7 @@ public class DilemmaItemFrame implements WaxAttachable {
     }
 
     private void initBackground(Interaction interaction,ItemDisplay disp){
-        disp.addScoreboardTag("tdilemma:background");
+        disp.addScoreboardTag("trivials:background");
         disp.setItemStack(new ItemStack(Material.ITEM_FRAME));
         Transformation trans = disp.getTransformation();
         FrameOffset offset = getFrameOffset();
@@ -181,7 +181,7 @@ public class DilemmaItemFrame implements WaxAttachable {
     }
 
     private void initContent(Interaction interaction, ItemDisplay disp) {
-        disp.getScoreboardTags().add("tdilemma:content");
+        disp.getScoreboardTags().add("trivials:content");
         disp.setItemStack(getContent());
         Transformation trans = disp.getTransformation();
         FrameOffset offset = getFrameOffset();

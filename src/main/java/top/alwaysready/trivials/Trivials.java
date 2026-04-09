@@ -3,8 +3,10 @@ package top.alwaysready.trivials;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.alwaysready.trivials.module.ModuleManager;
+import top.alwaysready.trivials.module.noteblock.*;
 import top.alwaysready.trivials.utils.ConfigUpdater;
 
 import java.io.File;
@@ -61,9 +63,33 @@ public final class Trivials extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.hasPermission("trivialdilemma.admin")) return false;
-        loadConfig();
-        sender.sendMessage("Reloaded");
+        if (!sender.hasPermission("trivials.admin")) return false;
+        switch (label){
+            case "trivialreload"->{
+                loadConfig();
+                sender.sendMessage("Reloaded");
+            }
+            case "trivialdebug"->{
+                if(!(sender instanceof Player p)) return false;
+                if(args.length==0) return false;
+                NoteNode note = new NotesBuilder()
+                        .parse(String.join(" ", args))
+                        .build();
+                NoteData data = new NoteData();
+                data.setId("debug");
+                data.setSound("minecraft:block.note_block.pling");
+                data.setTitle("debug");
+                data.setFirst(note);
+                PlayingNotes playing = new PlayingNotes()
+                        .setLocation(p.getLocation())
+                        .setData(data)
+                        .setSound(data.getSound());
+                playing.start();
+                getModuleManager().getModule(NoteBlockModule.class).ifPresent(module -> {
+                    module.addPlayingNote(data.getId(),playing);
+                });
+            }
+        }
         return true;
     }
 }

@@ -1,4 +1,4 @@
-version: 3
+version: 4
 modules:
   item_frame:
     enabled: true
@@ -7,4 +7,6 @@ modules:
   casing:
     enabled: true
   wax:
+    enabled: true
+  note_block:
     enabled: true

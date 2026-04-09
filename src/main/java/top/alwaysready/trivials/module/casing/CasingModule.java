@@ -66,7 +66,7 @@ public class CasingModule extends Module implements Listener {
         disp.setItemDisplayTransform(ItemDisplay.ItemDisplayTransform.GUI);
         disp.setBillboard(Display.Billboard.CENTER);
         disp.setItemStack(item.getItemStack().clone());
-        disp.getScoreboardTags().add("tdilemma:casing");
+        disp.getScoreboardTags().add("trivials:casing");
         item.remove();
     }
 
@@ -85,7 +85,7 @@ public class CasingModule extends Module implements Listener {
     public void onBlockBreak(Block block,Material type){
         if(!isGlass(type)) return;
         block.getWorld().getNearbyEntities(block.getBoundingBox(), e -> e instanceof ItemDisplay
-                && e.getScoreboardTags().contains("tdilemma:casing"))
+                && e.getScoreboardTags().contains("trivials:casing"))
                 .forEach(entity -> releaseItem((ItemDisplay) entity));
     }
 

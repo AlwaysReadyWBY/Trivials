@@ -6,3 +6,4 @@ authors: [ AlwaysReadyWby ]
 description: Just some random trivial features
 commands:
   trivialreload:
+  trivialdebug:

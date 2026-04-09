@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public class DilemmaMeta<T> extends FixedMetadataValue {
 
-    public static final Type<DilemmaItemFrame> CUSTOM_ITEM_FRAME = new Type<>("tdilemma:item_frame") {
+    public static final Type<DilemmaItemFrame> CUSTOM_ITEM_FRAME = new Type<>("trivials:item_frame") {
         @Override
         protected DilemmaItemFrame newValue() {
             return new DilemmaItemFrame();
@@ -23,7 +23,7 @@ public class DilemmaMeta<T> extends FixedMetadataValue {
             Optional<DilemmaItemFrame> opt = super.get(src);
             if (opt.isPresent()) return opt;
             if (src instanceof Interaction interaction
-                    && interaction.getScoreboardTags().contains("tdilemma:item_frame")) {
+                    && interaction.getScoreboardTags().contains("trivials:item_frame")) {
                 DilemmaItemFrame frame = newValue();
                 frame.onLoad(interaction);
                 src.setMetadata(getKey(), new DilemmaMeta<>(frame));
@@ -33,7 +33,7 @@ public class DilemmaMeta<T> extends FixedMetadataValue {
         }
     };
 
-    public static final Type<WaxHolder> WAX_INFO = new Type<>("tdilemma:wax_info") {
+    public static final Type<WaxHolder> WAX_INFO = new Type<>("trivials:wax_info") {
 
         @Override
         protected WaxHolder newValue() {
