@@ -150,6 +150,7 @@ public class NoteData {
         while(node!=null){
             PersistentDataContainer container = pdc.getAdapterContext().newPersistentDataContainer();
             node.save(container);
+            containers.add(container);
             node = node.getNext();
         }
         pdc.set(KEY_NODES, PersistentDataType.LIST.dataContainers(),containers);
@@ -160,6 +161,10 @@ public class NoteData {
         setId(pdc.get(KEY_ID, PersistentDataType.STRING));
         setTitle(pdc.get(KEY_TITLE, PersistentDataType.STRING));
         List<PersistentDataContainer> containers = pdc.get(KEY_NODES, PersistentDataType.LIST.dataContainers());
+        if(containers == null){
+            setFirst(null);
+            return;
+        }
         NoteNode first = null;
         NoteNode node = null;
         double start = 0;

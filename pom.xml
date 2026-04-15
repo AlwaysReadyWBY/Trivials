@@ -6,7 +6,7 @@
 
     <groupId>top.alwaysready</groupId>
     <artifactId>trivials</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>trivials</name>
